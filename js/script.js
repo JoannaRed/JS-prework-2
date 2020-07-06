@@ -15,3 +15,21 @@ else if(randomNumber == 3){
 }
 
 printMessage('Mój ruch to: ' + computerMove);
+
+
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+
+console.log('Gracz wpisał: ' + playerInput);
+
+let playerMove = 'nieznany ruch';
+
+if(playerInput == '1'){
+  playerMove = 'kamień';
+}
+else(playerInput == 2){
+  playerMoveMove = 'papier';
+}
+else if(playerInput == 3){
+  playerMoveMove = 'nożyce';
+}
+printMessage('Twój ruch to: ' + playerMove);
