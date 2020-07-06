@@ -43,8 +43,8 @@ let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.
 
 console.log('Gracz wpisał: ' + playerInput);
 
-let playerMove = 'nieznany ruch';
-
+let playerMove = getMoveName(randomNumber);
+/*
 if(playerInput == '1'){
   playerMove = 'kamień';
 }
@@ -57,6 +57,7 @@ else(playerInput == >3){
 else if(playerInput == 3){
   playerMoveMove = 'nożyce';
 }
+*/
 printMessage('Twój ruch to: ' + playerMove);
 
 
