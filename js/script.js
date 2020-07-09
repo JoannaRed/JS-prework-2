@@ -62,4 +62,13 @@ else if (computerMove == 'nożyce' && playerMove == 'kamień') {
 }
 
 }
+function buttonClicked(){
+  printMessage('Guzik został kliknięty');
+}
+
+let 'playRock' = document.getElementById('play-rock');
+
+playRock.addEventListener('click', buttonClicked);
+
 //playGame(3);
+
