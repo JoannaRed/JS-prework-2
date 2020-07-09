@@ -1,5 +1,5 @@
 function playGame(playerInput){
-  if (playerInput == 1,2,3)
+  clearMessages
 
 function getMoveName(argMoveId) {
   if (argMoveId == 1){
@@ -26,8 +26,7 @@ let computerMove = getMoveName(randomNumber);
 
 printMessage('Ruch komputera to: ' + computerMove);
 
-let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-
+//let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 //console.log('Gracz wpisał: ' + playerInput);
 
 //let playerMove = getMoveName(playerInput);
@@ -61,5 +60,6 @@ else if (computerMove == 'nożyce' && playerMove == 'nożyce') {
 else if (computerMove == 'nożyce' && playerMove == 'kamień') {
   printMessage('Ty wygrywasz!');
 }
+
 }
-playGame(3);
+//playGame(3);
