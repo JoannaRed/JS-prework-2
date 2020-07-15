@@ -1,25 +1,10 @@
-function playGame(playerMove){
-  clearMessages
-
-    
-  function displayResult(argComputerMove, argPlayerMove) {
-    printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-  } 
+function playGame(playerMove) {
+  clearMessages();
 
   let randomNumber = Math.floor(Math.random() * 3 + 1);
-
-  console.log('Wylosowana liczba to: ' + randomNumber);
-
   let computerMove = getMoveName(randomNumber);
-
-  printMessage('Ruch komputera to: ' + computerMove);
-
-  //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
-  //console.log('Gracz wpisał: ' + playerInput);
-
-  //let playerMove = getMoveName(playerInput);
-
-  printMessage('Twój ruch to: ' + playerMove);
+  
+  printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
 
   if (computerMove == 'kamień' && playerMove == 'papier') {
     printMessage('Ty wygrywasz!');
@@ -48,31 +33,7 @@ function playGame(playerMove){
   else if (computerMove == 'nożyce' && playerMove == 'kamień') {
     printMessage('Ty wygrywasz!');
   }
-
 }
-function buttonClicked(){
-  printMessage('Zagrales kamien');
-}
-
-let playRock = document.getElementById('play-rock');
-
-playRock.addEventListener('click', buttonClicked);
-
-function buttonClicked(){
-  printMessage('Zagrales papier');
-}
-
-let playPaper = document.getElementById('play-paper');
-
-playPaper.addEventListener('click', buttonClicked);
-
-function buttonClicked(){
-  printMessage('Zagrales nozyczki');
-}
-
-let playScissors = document.getElementById('play-scissors');
-
-playScissors.addEventListener('click', buttonClicked);
 
 
 function getMoveName(argMoveId) {
@@ -88,5 +49,20 @@ function getMoveName(argMoveId) {
   return 'nieznany ruch';
 }
 
-//playGame(3);
+let playRock = document.getElementById('play-rock');
+playRock.addEventListener('click', function() {
+  playGame('kamień');
+});
+
+
+let playPaper = document.getElementById('play-paper');
+playPaper.addEventListener('click', function() {
+  playGame('papier');
+});
+
+
+let playScissors = document.getElementById('play-scissors');
+playScissors.addEventListener('click', function() {
+  playGame('nożyce');
+});
 
