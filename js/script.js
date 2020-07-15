@@ -1,8 +1,9 @@
-function playGame(playerMove) {
+{
+  const playGame = function (playerMove){
   clearMessages();
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
-  let computerMove = getMoveName(randomNumber);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
+  const computerMove = getMoveName(randomNumber);
   
   printMessage('Zagrałem ' + computerMove + ', a Ty ' + playerMove);
 
@@ -35,8 +36,7 @@ function playGame(playerMove) {
   }
 }
 
-
-function getMoveName(argMoveId) {
+conts getMoveName = function (argMoveId){
   if (argMoveId == 1){
     return 'kamień';
   } else if (argMoveId == 2) {
@@ -45,24 +45,26 @@ function getMoveName(argMoveId) {
     return 'nożyce';
   }
 
+}
   printMessage('Nie znam ruchu o id ' + argMoveId + '.');
   return 'nieznany ruch';
 }
 
-let playRock = document.getElementById('play-rock');
+const playRock = document.getElementById('play-rock');
 playRock.addEventListener('click', function() {
   playGame('kamień');
 });
 
 
-let playPaper = document.getElementById('play-paper');
+conts playPaper = document.getElementById('play-paper');
 playPaper.addEventListener('click', function() {
   playGame('papier');
 });
 
 
-let playScissors = document.getElementById('play-scissors');
+const playScissors = document.getElementById('play-scissors');
 playScissors.addEventListener('click', function() {
   playGame('nożyce');
 });
 
+}
